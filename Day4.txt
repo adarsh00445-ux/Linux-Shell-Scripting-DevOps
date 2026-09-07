@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# ==============================================================================
+# DAY 4 - BASH SCRIPTING
+# ==============================================================================
+# QUESTION
+# 
+# Create 'backup.sh' that takes a filename as '$1'.
+# 
+# If the file does not exist:
+# -> Print 'Does not exist'
+# -> Exit with status '1'
+# 
+# If the file exists:
+# -> Create a backup with '.bak'
+# ==============================================================================
+
+filename=$1
+
+if [ ! -f "$filename" ]
+then
+    echo "Does not exist"
+    exit 1
+else
+    cp "$filename" "$filename.bak"
+fi
