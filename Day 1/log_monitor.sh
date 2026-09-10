@@ -16,3 +16,4 @@
 F1=server.log
 
 grep -in "error" $F1
+  
